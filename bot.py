@@ -49,7 +49,7 @@ def start(message):
 
 
 
-@bot.message_handler(func=lambda m: m.text == "Book Appointment")
+@bot.message_handler(func=lambda m: m.text == "Book Appointment 📅")
 def show_services(message):
     services = query.get_services()
     markup = types.InlineKeyboardMarkup()
@@ -89,7 +89,7 @@ def confirm(call):
     user_state.pop(call.from_user.id, None)
 
 
-@bot.message_handler(func=lambda m: m.text == "My Appointments")
+@bot.message_handler(func=lambda m: m.text == "My Appointments 📋")
 def show_appointments(message):
     user_id = str(message.from_user.id)
 
